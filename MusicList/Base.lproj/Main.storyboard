@@ -158,22 +158,73 @@
         <!--Featured-->
         <scene sceneID="Xe7-Lq-VoO">
             <objects>
-                <viewController id="4Rk-ab-3iM" sceneMemberID="viewController">
+                <viewController id="4Rk-ab-3iM" customClass="FeaturedController" customModule="MusicList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1bC-pR-oYq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-AA-j2i">
+                                <rect key="frame" x="0.0" y="20" width="375" height="236"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="236" id="y9w-VS-ID2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kendric Lamar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-Vv-7gz">
+                                <rect key="frame" x="16" y="264" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9p-3D-Mnf">
+                                <rect key="frame" x="265" y="579" width="94" height="30"/>
+                                <state key="normal" title="Get More Info"/>
+                                <connections>
+                                    <action selector="showMore:" destination="4Rk-ab-3iM" eventType="touchUpInside" id="9CN-1T-GvC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TQ5-Mw-kYy">
+                                <rect key="frame" x="16" y="313" width="343" height="258"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Kendrick Lamar Duckworth (born June 17, 1987) is an American rapper, songwriter, and record producer. He is regarded as one of the most skillful and successful hip hop artists of his generation.[1][2][3][4]
+
+Raised in Compton, California, Lamar embarked on his musical career as a teenager under the stage name K-Dot, releasing a mixtape that garnered local attention and led to his signing with indie record label Top Dawg Entertainment (TDE). He began to gain recognition in 2010, after his first retail release, Overly Dedicated. The following year, he independently released his first studio album, Section.80, which included his debut single, "HiiiPoWeR". By that time, he had amassed a large online following and collaborated with several prominent hip hop artists, including The Game, Busta Rhymes, and Snoop Dogg.
+
+Lamar's major label debut album, Good Kid, M.A.A.D City, was released in 2012 by TDE, Aftermath, and Interscope Records to critical acclaim. It debuted at #2 on the US Billboard 200 and was later certified platinum by the RIAA. The record contained the top 40 singles "Swimming Pools (Drank)", "Bitch, Don't Kill My Vibe", and "Poetic Justice". His critically acclaimed third album To Pimp a Butterfly (2015) incorporated elements of funk, soul, jazz, and spoken word. It debuted atop the charts in the US and the UK, and won the Grammy Award for Best Rap Album at the 58th ceremony. In 2016, Lamar released Untitled Unmastered, a collection of unreleased demos that originated during the recording sessions for Butterfly. He released his fourth album Damn in 2017 to further acclaim; its lead single "Humble" topped the US Billboard Hot 100 chart.
+
+Aside from his solo career, Lamar is also known as a member of the West Coast hip hop supergroup Black Hippy, alongside his TDE label-mates and fellow South Los Angeles–based rappers Ab-Soul, Jay Rock, and Schoolboy Q. Lamar has received many accolades over the course of his career, including thirteen Grammy Awards. In early 2013, MTV named him the "Hottest MC in the Game", on their annual list.[5] Time named him one of the 100 most influential people in the world in 2016.[6] In 2018, Damn became the first non-classical and non-jazz album to be awarded the Pulitzer Prize for Music.[7]</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bgY-Vv-7gz" firstAttribute="top" secondItem="j7M-AA-j2i" secondAttribute="bottom" constant="8" id="4B8-yN-Id5"/>
+                            <constraint firstItem="r7a-07-jXv" firstAttribute="trailing" secondItem="bgY-Vv-7gz" secondAttribute="trailing" constant="16" id="4ph-BX-uvC"/>
+                            <constraint firstItem="b9p-3D-Mnf" firstAttribute="top" secondItem="TQ5-Mw-kYy" secondAttribute="bottom" constant="8" id="5Sz-Qe-Pk6"/>
+                            <constraint firstItem="TQ5-Mw-kYy" firstAttribute="leading" secondItem="r7a-07-jXv" secondAttribute="leading" constant="16" id="Ax7-fb-Nce"/>
+                            <constraint firstItem="r7a-07-jXv" firstAttribute="bottom" secondItem="b9p-3D-Mnf" secondAttribute="bottom" constant="9" id="C7t-F0-YMD"/>
+                            <constraint firstItem="TQ5-Mw-kYy" firstAttribute="top" secondItem="bgY-Vv-7gz" secondAttribute="bottom" constant="8" id="CKG-nO-SrF"/>
+                            <constraint firstItem="bgY-Vv-7gz" firstAttribute="top" secondItem="j7M-AA-j2i" secondAttribute="bottom" constant="8" id="Dx3-FZ-jye"/>
+                            <constraint firstItem="r7a-07-jXv" firstAttribute="trailing" secondItem="TQ5-Mw-kYy" secondAttribute="trailing" constant="16" id="Noj-Tw-voW"/>
+                            <constraint firstItem="j7M-AA-j2i" firstAttribute="leading" secondItem="r7a-07-jXv" secondAttribute="leading" id="QgB-uX-ezW"/>
+                            <constraint firstItem="j7M-AA-j2i" firstAttribute="trailing" secondItem="r7a-07-jXv" secondAttribute="trailing" id="Ycj-f7-ELF"/>
+                            <constraint firstItem="r7a-07-jXv" firstAttribute="trailing" secondItem="b9p-3D-Mnf" secondAttribute="trailing" constant="16" id="abk-qM-0OR"/>
+                            <constraint firstItem="j7M-AA-j2i" firstAttribute="top" secondItem="r7a-07-jXv" secondAttribute="top" id="cQ5-nB-UKi"/>
+                            <constraint firstItem="bgY-Vv-7gz" firstAttribute="leading" secondItem="r7a-07-jXv" secondAttribute="leading" constant="16" id="mgO-Cv-hN3"/>
+                            <constraint firstItem="TQ5-Mw-kYy" firstAttribute="top" secondItem="bgY-Vv-7gz" secondAttribute="bottom" constant="8" id="scj-XP-taw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r7a-07-jXv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Featured" image="start" id="PV2-Ww-t7e"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEu-8H-p4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="910"/>
+            <point key="canvasLocation" x="335.19999999999999" y="908.9955022488756"/>
         </scene>
     </scenes>
     <resources>
         <image name="disc" width="24" height="24"/>
+        <image name="lamar" width="2000" height="1310"/>
         <image name="start" width="24" height="24"/>
     </resources>
 </document>

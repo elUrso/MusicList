@@ -13,13 +13,18 @@ class MusicDetailController: UIViewController {
     @IBOutlet weak var artistTitle: UINavigationItem!
     @IBOutlet var musicView: MusicDetailView!
     
+    var viewCreated = false
+    
     var music: Music = Music.blank {
         didSet {
+            let image = UIImage(named: music.image)
             artistTitle.title = music.artist
-            musicView.albumImage.image = UIImage(named: music.image)
-            musicView.albumLabel.text = music.album
-            musicView.musicLabel.text = music.name
-            musicView.yearLabel.text = "\(music.year)"
+            if(viewCreated) {
+                musicView.albumImage.image = image
+                musicView.albumLabel.text = music.album
+                musicView.musicLabel.text = music.name
+                musicView.yearLabel.text = "\(music.year)"
+            }
         }
     }
     
@@ -27,6 +32,14 @@ class MusicDetailController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let image = UIImage(named: music.image)
+        artistTitle.title = music.artist
+        musicView.albumImage.image = image
+        musicView.albumLabel.text = music.album
+        musicView.musicLabel.text = music.name
+        musicView.yearLabel.text = "\(music.year)"
+        
+        viewCreated = true
     }
     
 
